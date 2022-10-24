@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import Head from 'next/head';
+// import Head from 'next/head';
+import Script from 'next/script';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 
@@ -15,7 +16,7 @@ export default function Start({ countries }) {
 
   return (
     <div>
-      <Head>
+      <Script strategy="afterInteractive">
         <title>Core Web Vitals</title>
         <meta name="description" content="Core web vitals walk through" />
         <link rel="icon" href="/favicon.ico" />
@@ -23,7 +24,7 @@ export default function Start({ countries }) {
           href="https://fonts.googleapis.com/css2?family=Inter"
           rel="stylesheet"
         />
-      </Head>
+      </Script>
 
       <main className={styles.container}>
         <h1 className={styles.title}>
