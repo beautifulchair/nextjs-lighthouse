@@ -46,7 +46,7 @@ export default function Start({ countries }) {
 
               //Dynamically load libraries
               const Fuse = (await import('fuse.js')).default;
-              const _ = (await import('loadsh')).default;
+              const _ = (await import('lodash')).default;
 
               const fuse = new Fuse(countries, {
                 keys: ['name'],
